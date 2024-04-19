@@ -1,0 +1,164 @@
+FACTORIAL
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Factorial Demo</title>
+<script language="javascript">
+document.write("<h4>Name: Pranay Sandeep Monde.</h4>")
+var x=parseInt(prompt("Enter a number",""));
+var fact=1,i;
+for(i=1;i<=x;i++)
+fact*=i;
+document.write("Factorial of "+x+" is: "+fact+"");
+</script>
+</head>
+<body>
+</body>
+</html>
+
+FIBONACCI
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fibonacci series Demo</title>
+<script language="javascript">
+document.write("<h4>Name: Pranay Sandeep Monde.</h4>")
+var a=0,b=1,c,n,i;
+n=parseInt(prompt("Enter limit for fibonacci series:","")); document.write("<h2> Fibonacci series: </h2><br>");
+document.write(a+" "+b+" ");
+for(i=2;i<n;i++)
+{
+c=a+b;
+document.write(c+" ");
+a=b;
+b=c;
+}
+</script>
+</head>
+<body>
+</body>
+</html>
+
+
+PRIME
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>prime number</title>
+<script>
+document.write("<h4>Name: Pranay Sandeep Monde.</h4>")
+for(var i=1;i<=100;i++)
+{
+	var flag=0;
+	for(var j=2;j<=i/2;j++)
+	{
+		if(i%j==0)
+		{
+			flag=1;
+			break;
+		}
+	}
+	if(flag==0)
+	{
+		document.write(i+" ");
+	}
+}
+</script>
+</head>
+</html>
+
+
+SUM
+
+<!DOCTYPE html>
+<head>
+<title> SUM OF DIGITS </title>
+<script>
+document.write("<h4>Name: Pranay Sandeep Monde.</h4>")
+var n=parseInt(prompt("Enter a number"," "));
+var p=0,y;
+while(n>0)
+{
+y=n%10;
+p=p+y;
+n=parseInt(n/10);
+}
+document.write("Sum of digits is "+p)
+</script>
+</head>
+</html>
+
+
+FORM VALIDATION
+
+<html>
+<head>
+<title>Form Validation</title>
+<script type="text/javascript">
+document.write("<h4>Name: Pranay Sandeep Monde.</h4>")
+function validate()
+{
+if(document.myForm.Name.value == "" )
+{
+alert("Please provide your name!");
+document.myForm.Name.focus();
+return false;
+}
+if(document.myForm.EMail.value == "")
+{
+alert("Please provide your Email!"); 
+document.myForm. EMail.focus();
+return false;
+}
+if(document.myForm.Zip.value == "" ||isNaN(document.myForm.Zip.value) ||document.myForm.Zip.value.length != 5)
+{
+alert("Please provide a zip in the format #####."); 
+document.myForm.Zip.focus(); 
+return false;
+}
+if(document.myForm.Country.value == "-1")
+{
+alert("Please provide your country!");
+return false;
+}
+return(true);
+}
+</script>
+</head>
+<body>
+<form name="myForm" onsubmit="return (validate());">
+<table cellspacing="2" cellpadding="2" border="1">
+<tr>
+<td align="right">Name</td>
+<td><input type="text" name="Name" /></td>
+</tr>
+<tr>
+<td align="right">EMail</td>
+<td><input type="text" name="EMail" /></td>
+</tr>
+<tr>
+<td align="right">Zip Code</td>
+<td><input type="text" name="Zip" /></td>
+</tr>
+<tr>
+<td>
+<select name="Country">
+<option value="-1" selected>[choose yours]</option>
+<option value="1">USA</option>
+<option value="2">UK</option>
+<option value="3">INDIA</option>
+</select>
+</td>
+</tr>
+<tr>
+<td align="right"></td>
+<td><input type="submit" value="Submit" /></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+
